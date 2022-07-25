@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+import React from "react";
+import Navbar from "../navbr/Navbar";
 
 
 function App() {
   return (
     <div>
-      
+      <Navbar/>
     </div>
   );
 }
