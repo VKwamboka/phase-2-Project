@@ -1,0 +1,22 @@
+{
+    "drinks":[
+        {
+            "id": "1",
+            "strDrink": "GG",
+            "strCategory": "Ordinary Drink",
+            "strAlcoholic": "Optional alcohol",
+            "strInstructions": "Pour the Galliano liqueur over ice. Fill the remainder of the glass with ginger ale and thats all there is to it. You now have a your very own GG.",
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/vyxwut1468875960.jpg",
+            "strIngredient1": "Galliano",
+            "strIngredient2": "Ginger ale",
+            "strIngredient3": "Ice",
+            "strIngredient4": null,
+            "strIngredient5": null,
+            "strIngredient6": null,
+            "strIngredient7": null,
+            "strIngredient8": null,
+            "strIngredient9": null,
+            "strIngredient10": null
+        }
+    ]
+}
