@@ -5,8 +5,9 @@ import {BrowserRouter as Router} from 'react-router-dom'
 export default function Navbar() {
   return (
    <nav className='navbar navbar-expand-lg bg-light'>
-    <Router>
-        <ul className='navbar-nav'>
+    {/* <Router> */}
+    <div className='container-fluid'>
+    <ul className='navbar-nav'>
             <li className='nav-item'>
                 <Link className='nav-link' to='/'>Home</Link>
             </li>
@@ -15,7 +16,9 @@ export default function Navbar() {
             </li>
 
         </ul>
-    </Router>
+    </div>
+       
+    {/* </Router> */}
    </nav>
     
   )
