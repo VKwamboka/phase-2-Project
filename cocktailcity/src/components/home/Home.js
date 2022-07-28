@@ -1,9 +1,11 @@
 import React,{useEffect, useState} from 'react'
 import CockCard from '../cockcard/CockCard'
+import Favourites from '../favourites/Favourites';
 const DRINK_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
-export default function Home() {
 
-  const [drinks, setDrinks] = useState([])
+  export default function Home() {
+
+  const [drinks, setDrinks] = useState([]);
 
  
   //load drinks from external API
@@ -19,7 +21,14 @@ export default function Home() {
     drinkFetcher, []
   )
 
-  let drinkCards =drinks.map((drink) => ( <CockCard  drinkName={drink.strDrink} drinkThumb={drink.strDrinkThumb} drinkId={drink.idDrink} key ={drink.idDrink}/>))
+
+  let drinkCards =drinks.map((drink) => ( <Favourites  
+  drinkName={drink.strDrink} 
+  drinkThumb={drink.strDrinkThumb} 
+  drinkId={drink.idDrink}
+   key ={drink.idDrink}
+   
+   />))
   
   return (
     <div className='container'>
@@ -27,8 +36,10 @@ export default function Home() {
       <div className='row'>
       <div className='col-12'>
        {drinkCards}
+       
        </div>
       </div>
+      
    </div>
   )
 }
