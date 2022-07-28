@@ -22,7 +22,7 @@ const DRINK_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cock
   )
 
 
-  let drinkCards =drinks.map((drink) => ( <Favourites  
+  let drinkCards =drinks.map((drink) => ( <CockCard 
   drinkName={drink.strDrink} 
   drinkThumb={drink.strDrinkThumb} 
   drinkId={drink.idDrink}
