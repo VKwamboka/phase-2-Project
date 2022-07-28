@@ -7,7 +7,7 @@ export default function Search() {
   const [searchItem, setSearchItem] = useState("")
   const [counter, setCounter] = useState(0)
   const [results, setResults] = useState(0)
-
+// json-server --watch db.json -p 8004
 
   const handleSearch = (event) => {
     setSearchItem(event.target.value)
@@ -32,23 +32,19 @@ export default function Search() {
         .then((data) =>{
           const drink = data.drinks[0]
     
-          setTitle(drink.strDrink)
-          setCategory(drink.strCategory)
-          setAlcoholic(drink.strAlcoholic)
-          setIngre1(drink.strIngredient1)
-          setIngre2(drink.strIngredient2)
-          setIngre3(drink.strIngredient3)
-          setIngre4(drink.strIngredient4)
-          setIngre5(drink.setIngredient5)
-          setIngre6(drink.setIngredient6)
-          setInstructions(drink.strInstructions)
-          setImage(drink.strDrinkThumb)
         })
-        // data.forEach( (meal) => {
-        //     setTitle(meal.strMeal)
-        //     setCategory(meal.strCategory)
-        //     setInstructions(meal.strInstructions)
-        //     setImage(meal.strMealThumb)
+        // data.forEach( (drink) => {
+        //   setTitle(drink.strDrink)
+        //   setCategory(drink.strCategory)
+        //   setAlcoholic(drink.strAlcoholic)
+        //   setIngre1(drink.strIngredient1)
+        //   setIngre2(drink.strIngredient2)
+        //   setIngre3(drink.strIngredient3)
+        //   setIngre4(drink.strIngredient4)
+        //   setIngre5(drink.setIngredient5)
+        //   setIngre6(drink.setIngredient6)
+        //   setInstructions(drink.strInstructions)
+        //   setImage(drink.strDrinkThumb)
         // } ) 
     })
 }
@@ -63,7 +59,7 @@ useEffect(
         <label htmlFor="search" className="form-label">SEARCH DRINK</label>
         <input type="text" className="form-control" id="search" name="search" value={searchItem} onChange={handleSearch}/>
       </form>
-      <h3 className='mt-4'>SEARCH RESULTS (0)</h3>
+      <h3 className='mt-4'>SEARCH RESULTS ({results})</h3>
       <div className='row'>
 
       </div>
