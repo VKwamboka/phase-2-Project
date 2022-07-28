@@ -8,6 +8,7 @@ import RecipeForm from "../addrecipe/RecipeForm";
 // import Favourites from "../favourites/Favourites";
 import FavouritesContainer from "../favourites/FavouritesContainer";
 import Favourites from "../favourites/Favourites";
+import Displayrecipe from "../addrecipe/Displayrecipe";
 
 
 
@@ -18,7 +19,7 @@ function App() {
 
     function addToFavorites(favId) {
       setDrinks(drinks.map(drink => {
-        return drink.id === favId ? {...favId, isFavorite: !favId.isFavorite} : drink
+        return drink.id === favId ? {...drink, isFavorite: !drink.isFavorite} : drink;
         }  
       ))
     }
@@ -49,18 +50,18 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/search' element={<Search/>}/>
-        <Route exact path='/recipeform' element={<RecipeForm/>}/>
+        <Route exact path='/displayrecipe' element={<Displayrecipe/>}/>
         <Route exact path ='/drink/:drinkId' element={<DrinkDetails/>}/>
         <Route exact path ='/favourites' element={<AppFav/>}/>
       </Routes>
-      <div className="app">
+      {/* <div className="app">
       <div className="sidebar">
         <button onClick={() => setFavoriteVisible(!favoriteVisible)} >
           Show/hide Favorite Cocktails
         </button>
       </div>
       {renderPoemView()}
-    </div>
+    </div> */}
     </Router>
   );
 }

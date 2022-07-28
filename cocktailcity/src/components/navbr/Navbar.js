@@ -15,7 +15,7 @@ export default function Navbar() {
                 <Link className='nav-link' to='/search'>Search</Link>
             </li>
             <li className='navbar-nav'>
-                <Link className='nav-link' to='/recipeform'>MyRecipes</Link>
+                <Link className='nav-link' to='/displayrecipe'>MyRecipes</Link>
             </li>
             <li className='navbar-nav'>
                 <Link className='nav-link' to='/favourites'>Favorites♥</Link>
