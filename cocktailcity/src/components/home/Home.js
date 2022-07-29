@@ -32,13 +32,13 @@ const DRINK_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cock
   
   return (
     <div className='container'>
-      Home
-      <div className='row'>
-      <div className='col-12'>
+     <p> Home</p>
+      {/* <div className='scard'> */}
+      {/* <div className='col-sm-'> */}
        {drinkCards}
        
-       </div>
-      </div>
+       {/* </div>
+      </div> */}
       
    </div>
   )
