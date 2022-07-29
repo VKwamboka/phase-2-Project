@@ -33,17 +33,23 @@ function Displayrecipe() {
      />))
   return (
     <div className='container'>
+    
     <div className='app'>
      {/* <div className='row'>
       <div className='col-12'> */}
-       {drinkCards}
+     
+       <div className='sidebar'>
+      
+      <RecipeForm/>
+    </div>
+    
+    {drinkCards}
 {/*        
        </div>
       </div> */}
-      <div >
-      <RecipeForm/>
-      </div>
-    </div>
+      </div >
+      
+     
     
     </div>
   )
