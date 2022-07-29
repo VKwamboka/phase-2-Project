@@ -12,7 +12,7 @@ export default function ReciContainer({ title, drinkThumb, drinkId}) {
 
 
   return (
-    <div className='sca'
+    <div className='scard'>
     <div className='app'>
     <div className='container'>
     <div className="card" style={{width: 12.6 + 'rem'}}>
@@ -28,6 +28,7 @@ export default function ReciContainer({ title, drinkThumb, drinkId}) {
                 {/* <button type="button" class="btn btn-danger">Delete</button> */}
             </div>
         </div>  
+    </div>
     </div>
     </div>
   )
