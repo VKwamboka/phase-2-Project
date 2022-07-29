@@ -68,8 +68,8 @@ export default function RecipeForm() {
     }
   return (
     // <div className = 'app'>
-    <div  className = 'app'>
-        <div className='sidebar'>
+    <div  className = ''>
+        <div className='poems-container'>
       <p>Add your Cocktail Recipes here</p> 
         <button 
               onClick={() => setFormVisible(!formVisible)} >
