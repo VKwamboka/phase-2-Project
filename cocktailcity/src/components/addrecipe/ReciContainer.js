@@ -12,6 +12,7 @@ export default function ReciContainer({ title, drinkThumb, drinkId}) {
 
 
   return (
+    <div className='sca'
     <div className='app'>
     <div className='container'>
     <div className="card" style={{width: 12.6 + 'rem'}}>
