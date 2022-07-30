@@ -52,6 +52,7 @@ function App() {
         <Route exact path='/search' element={<Search/>}/>
         <Route exact path='/displayrecipe' element={<Displayrecipe/>}/>
         <Route exact path ='/drink/:drinkId' element={<DrinkDetails/>}/>
+        <Route exact path ='/fav/:drinkId' element={<Displayrecipe/>}/>
         <Route exact path ='/favourites' element={<AppFav/>}/>
       </Routes>
       {/* <div className="app">
