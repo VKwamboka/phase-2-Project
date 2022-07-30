@@ -16,7 +16,7 @@ export default function CockCard({ drinkName, drinkThumb, drinkId}) {
         <div className="card" style={{width: 12.6 + 'rem'}}>
             <img src={drinkThumb} className="card-img-top" style={{height: 200 + 'px', width:200 + 'px',}} alt={drinkName}/>
             <div className="card-body">
-                {/* <p className="card-title">{drinkName}</p> */}
+                <p className="card-title">{drinkName}</p>
                 
                 {/* PROBLEM HERE */}
                 {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
