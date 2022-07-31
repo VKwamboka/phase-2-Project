@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 export default function Navbar() {
   return (
-   <nav className='navbar navbar-expand-lg bg-#857076'>
+   <nav className='navbar navbar-expand-lg bg-#1d000d'>
     {/* <Router> */}
     <div className='container-fluid'>
     <ul className='navbar-nav'>
