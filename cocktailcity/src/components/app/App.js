@@ -24,6 +24,10 @@ function App() {
       ))
     }
 
+    // function removePoem(poemToRemove) {
+    //   setPoems(poems.filter(poem => poem.id !== poemToRemove.id))
+    // }
+
     function renderPoemView() {
       if (cocktailsToDisplay.length === 0 && !favoriteVisible) {
         return (<h1>You have no favorites added</h1>)
