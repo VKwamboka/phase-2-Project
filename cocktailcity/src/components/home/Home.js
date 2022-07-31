@@ -32,7 +32,20 @@ const DRINK_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cock
   
   return (
     <div className='container'>
-     <p> Home</p>
+    <h3 className='mt-4'>WELCOME TO THE COCKTAILCITY </h3>
+   
+    <p className='info'> <img className='intro' src='https://www.thecocktaildb.com/images/cocktail_left.png' style={{height: 100 + 'px', width:100 + 'px',}} alt='cock'/> 
+
+    These classics will never steer you wrong.
+    <img src='https://www.thecocktaildb.com/images/cocktail_right.png' style={{height: 100 + 'px', width:100 + 'px',}} alt='cock'/><br/> 
+    <br/>
+  </p> 
+   
+   
+    <hr className='class1'/>
+     <p className='mt-4'> Common Cocktail Drinks</p>
+     
+    
       {/* <div className='scard'> */}
       {/* <div className='col-sm-'> */}
        {drinkCards}
