@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 
 const cocktailAPI = "http://localhost:8004/drinks";
 
-export default function RecipeForm() {
+export default function RecipeForm({addDrink}) {
 
   const [strDrinkThumb, setImage] = useState("")
   const [strDrink, setTitle] = useState("")
@@ -48,7 +48,7 @@ export default function RecipeForm() {
         }),
       })
         .then((r) => r.json())
-        .then((newCocktail) => console.log(newCocktail));
+        .then((newCocktail) => addDrink(newCocktail));
   
       setTitle("")
       setCategory("")
@@ -68,9 +68,9 @@ export default function RecipeForm() {
     }
   return (
     // <div className = 'app'>
-    <div  className = ''>
-        <div className='poems-container'>
-      <p>Add your Cocktail Recipes here</p> 
+    // <div  className = ''>
+        <div className='sidebar'>
+    
         <button 
               onClick={() => setFormVisible(!formVisible)} >
               Show/hide new recipe form
@@ -115,7 +115,7 @@ export default function RecipeForm() {
           />
         </form>: null}
         </div>
-        </div>
+        // </div>
     // </div>
   )
 }
