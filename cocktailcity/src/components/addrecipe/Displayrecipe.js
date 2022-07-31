@@ -22,35 +22,34 @@ function Displayrecipe() {
   useEffect(
     drinkFetcher, []
   )
+  function handleDeleteClick(drinkRemove) {
+    setDrinks(drinks.filter(drink => drink.id !== drinkRemove.id))
+  }
+  
 
+  function addDrink(newDrink) {
+    setDrinks([...drinks, newDrink]);
+  }
   
   let drinkCards =drinks.map((drink) => ( <ReciContainer 
     title={drink.strDrink} 
     drinkThumb={drink.strDrinkThumb} 
     drinkId={drink.idDrink}
+    drinkk ={drink.idDrink}
      key ={drink.idDrink}
-     
+     handleDeleteClick = {handleDeleteClick}
      />))
   return (
     <div className='container'>
+      <p className='info'>Add your personal cocktail recipes here</p>
+      <div className='app'>
+        <div className='row'>
+          <RecipeForm addDrink={addDrink}/>
+          
+        </div>     
     
-    <div className='app'>
-     {/* <div className='row'>
-      <div className='col-12'> */}
-     
-       <div className='sidebar'>
-      
-      <RecipeForm/>
-    </div>
-    
-    {drinkCards}
-{/*        
-       </div>
-      </div> */}
-      </div >
-      
-     
-    
+      </div>
+      {drinkCards}
     </div>
   )
 }
