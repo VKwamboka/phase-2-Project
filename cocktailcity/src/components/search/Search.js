@@ -40,6 +40,8 @@ export default function Search() {
         //   console.log(data)
     
         // })
+    }).catch(error =>{
+      console.log(error)
     })
 }
 
@@ -66,9 +68,13 @@ let card =  drinks.map(drink =>{
     <div className='container'>
       <form onSubmit={handleSubmit}>
         <label htmlFor="search" className="form-label">SEARCH DRINK</label>
+       
         <input type="text" className="form-control" id="search" name="search" value={searchItem} onChange={handleSearch}/>
       </form>
-      <h3 className='mt-4'>SEARCH RESULTS ({results})</h3>
+      <h3 className='mt-4'>MOST POPULAR DRINKS </h3>
+     
+        <hr className='class1'/>
+        <br/>
       <div >
           {card}
       </div>
