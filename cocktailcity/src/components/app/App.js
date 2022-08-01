@@ -99,6 +99,7 @@ function AppFav() {
       }
     }
   return (
+    <div className="container">
     <div className="app">
       <div className="sidebar">
         <button onClick={() => setFavoriteVisible(!favoriteVisible)} >
@@ -106,6 +107,7 @@ function AppFav() {
         </button>
       </div>
       {renderPoemView()}
+    </div>
     </div>
   )
 }
