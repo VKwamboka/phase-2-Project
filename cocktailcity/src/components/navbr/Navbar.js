@@ -12,7 +12,7 @@ export default function Navbar() {
                 <Link className='nav-link' to='/'>Home</Link>
             </li>
             <li className='navbar-nav'>
-                <Link className='nav-link' to='/search'>Search</Link>
+                <Link className='nav-link' to='/search'>Popular</Link>
             </li>
             <li className='navbar-nav'>
                 <Link className='nav-link' to='/displayrecipe'>MyRecipes</Link>
