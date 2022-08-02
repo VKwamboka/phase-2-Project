@@ -60,7 +60,7 @@ This project was contributed to by:
 - [Verah Kwamboka](https://github.com/VKwamboka/)
 
 # Link to Live site
-The project is licensed by MIT.
+https://cocktailcity.herokuapp.com/
 
 # License
 The project is licensed by MIT.
