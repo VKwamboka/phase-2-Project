@@ -7,9 +7,7 @@ export default function AppFav() {
   
     const [drinks, setDrinks] = useState([]);
       const [favoriteVisible, setFavoriteVisible] = useState(true);
-      //PROBLEM
-  
-      
+
       const values = Object.values(drinks);
         // console.log(values);
       const cocktailsToDisplay = values.filter((drink) => favoriteVisible || drink.isFavorite);
