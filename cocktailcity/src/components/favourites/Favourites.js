@@ -37,8 +37,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 
-export default function Favourites({drink, title, drinkThumb, drinkId, addToFavorites}) {
-// const {title, drinkThumb, drinkId} = drink;
+export default function Favourites({ title, drinkThumb, drinkId, addToFavorites}) {
+
 
   return (
     
@@ -51,9 +51,9 @@ export default function Favourites({drink, title, drinkThumb, drinkId, addToFavo
                 {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                 <Link to={"/drink/"+drinkId}  className="btn btn-primary btn-sm">Details</Link>
                 {/* PROBLEM IS HERE */}
-                <button  className='btn btn-success btn-sm'>
+                {/* <button  className='btn btn-success btn-sm'>
                 ♥ Favorite
-                </button>
+                </button> */}
                 {/* <button type="button" class="btn btn-danger">Delete</button> */}
             </div>
         </div>  

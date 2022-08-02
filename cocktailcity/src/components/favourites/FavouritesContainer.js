@@ -1,23 +1,24 @@
 import React from 'react'
-// import CockCard from '../cockcard/CockCard'
-import Favourites from './Favourites'
+import CockCard from '../cockcard/CockCard'
 
-export default function FavouritesContainer({drinks, cocktailsToDisplay, addToFavorites}) {
-  let cockCards = drinks.map((drink)=>(<Favourites 
-  title = {drink.strDrink} 
+export default function FavouritesContainer({drinks, addToFavorites}) {
+  
+  let cockCards = drinks.map((drink)=>(<CockCard
+  drinkName = {drink.strDrink} 
   drinkThumb = {drink.strDrinkThumb}  
-  drinkId = {drink.id}
-  key={drink.id} 
-  drink={drink} 
-  drinks = {cocktailsToDisplay}
+  drinkId = {drink.idDrink}
+  key={drink.idDrink} 
+  drink={drink.idDrink} 
+  // drinks = {cocktailsToDisplay}
   addToFavorites={addToFavorites} 
   
   />)) 
   return (
+    <div className='container'>
     <div className="poems-container">
-    <p>Favourites Container</p>
+    <p className='info'>Favourites Container</p>
     {cockCards}
-        {/* <CockCard/> */}
+    </div>
     </div>
   )
 }

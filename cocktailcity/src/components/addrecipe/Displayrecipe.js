@@ -24,9 +24,9 @@ function Displayrecipe() {
   )
   function handleDeleteClick(drinkRemove) {
     setDrinks(drinks.filter(drink => drink.id !== drinkRemove.id))
+    console.log("hi")
   }
-  
-
+    
   function addDrink(newDrink) {
     setDrinks([...drinks, newDrink]);
   }
@@ -34,9 +34,9 @@ function Displayrecipe() {
   let drinkCards =drinks.map((drink) => ( <ReciContainer 
     title={drink.strDrink} 
     drinkThumb={drink.strDrinkThumb} 
-    drinkId={drink.idDrink}
+    drinkId={drink.id}
     drinkk ={drink.idDrink}
-     key ={drink.idDrink}
+     key ={drink.id}
      handleDeleteClick = {handleDeleteClick}
      />))
   return (

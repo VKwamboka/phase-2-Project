@@ -1,9 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-const SEARCH_URL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
+const SEARCH_URL = "http://localhost:8004/drinks"
 
-export default function DrinkDetails() {
-  const [image, setImage] = useState("")
+export default function RecipeDetails() {
+  const [drinkThumb, setImage] = useState("")
   const [title, setTitle] = useState("")
   const [category, setCategory] = useState("")
   const [alcoholic, setAlcoholic] = useState("")
@@ -21,14 +21,14 @@ export default function DrinkDetails() {
 
   let {drinkId} = useParams()
 
-  const actualSearch = SEARCH_URL + drinkId
-
+  const actualSearch = SEARCH_URL
   const drinkFetcher = () =>{
     fetch(actualSearch)
     .then((r) => r.json())
     .then((data) =>{
-      console.log(data)
-      const drink = data.drinks[0]
+        console.log(data)
+      const drink = data[0]
+
 
       setTitle(drink.strDrink)
       setCategory(drink.strCategory)
@@ -51,7 +51,7 @@ export default function DrinkDetails() {
   return (
     <div>
       <center>
-        <img src={image} style={{height: 200 + 'px', width:200 + 'px',}} alt="Drink"/>
+        <img src={drinkThumb} style={{height: 200 + 'px', width:200 + 'px',}} alt="Drink"/>
         <h3>{title}</h3>
         <h6 className='badge bg-success'>{category}</h6>
         <h6>{alcoholic}</h6>

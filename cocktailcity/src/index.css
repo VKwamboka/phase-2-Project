@@ -8,6 +8,7 @@ body {
   
   .mt-4{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
   }
   .class1{
     border-top: 5px solid white;
@@ -94,7 +95,13 @@ body {
     width: 25%;
 
   }
-
+  .apps {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 
   nav{
     background: #1d000d;
@@ -106,6 +113,9 @@ body {
   }
     .card{
     box-shadow: 0 0 3px #3a0213;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 310px;
     }
     /* grid-template-rows: auto; */
     /* grid: 2%; */

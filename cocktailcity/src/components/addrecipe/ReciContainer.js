@@ -5,12 +5,12 @@ const cocktailAPI = "http://localhost:8004/drinks";
 
 export default function ReciContainer({ title, drinkThumb, drinkId,handleDeleteClick}) {
   
-  function onDeleteClick(e,drink) {
+  function onDeleteClick(e) {
     e.preventDefault();
-    fetch(`${cocktailAPI}/${drink.id}`, {
+    fetch(`${cocktailAPI}/${drinkId}`, {
       method: "DELETE",
     });
-    handleDeleteClick(drink);
+    handleDeleteClick(drinkId,title,drinkThumb);
   }
 
 
@@ -24,12 +24,15 @@ export default function ReciContainer({ title, drinkThumb, drinkId,handleDeleteC
           <div className="card-body">
               <h5 className="card-title">{title}</h5>
               {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-              <Link to={"/drink/"+drinkId}  className="btn btn-primary btn-sm">Details</Link>
+              <Link to={"/drinks/"+drinkId}  className="btn btn-primary btn-sm"> Details</Link>
               {/* PROBLEM IS HERE */}
-              <button  className='btn btn-success btn-sm'>
+              {/* <button  className='btn btn-success btn-sm'>
               Fav♥
-              </button>
-              <button type="button" className="btn btn-danger btn-sm" onClick={onDeleteClick}>❌</button>
+              </button> */}
+              {/* <button onClick={() => addToFavorites(drinkId)}>
+                 {drinkId.isFavorite ? "Unfavorite" : "♥ Favorite" }
+              </button> */}
+              <button type="button" className="btn btn-danger btn-sm" onClick={onDeleteClick}>DELETE</button>
           </div>
         </div>  
       </div>

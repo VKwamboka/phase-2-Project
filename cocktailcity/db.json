@@ -1,24 +1,6 @@
 {
   "drinks": [
     {
-      "id": "1",
-      "strDrink": "GG",
-      "strCategory": "Ordinary Drink",
-      "strAlcoholic": "Optional alcohol",
-      "strInstructions": "Pour the Galliano liqueur over ice. Fill the remainder of the glass with ginger ale and thats all there is to it. You now have a your very own GG.",
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/vyxwut1468875960.jpg",
-      "strIngredient1": "Galliano",
-      "strIngredient2": "Ginger ale",
-      "strIngredient3": "Ice",
-      "strIngredient4": null,
-      "strIngredient5": null,
-      "strIngredient6": null,
-      "strIngredient7": null,
-      "strIngredient8": null,
-      "strIngredient9": null,
-      "strIngredient10": null
-    },
-    {
       "strDrink": "mangoo",
       "strCategory": "mann",
       "strAlcoholic": "Optional alcoholic",
@@ -35,42 +17,6 @@
       "strIngredient9": "",
       "strIngredient10": "",
       "id": "W6nh0fL"
-    },
-    {
-      "strDrink": "hooo",
-      "strCategory": "swiss",
-      "strAlcoholic": "Alcoholic",
-      "strInstructions": "",
-      "strDrinkThumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm_ytqVENylDVOtSNtwHT5q9M7oY8SU46vYA&usqp=CAU",
-      "strIngredient1": "wine\nsugar\nBitters\nGlassware",
-      "strIngredient2": "",
-      "strIngredient3": "",
-      "strIngredient4": "",
-      "strIngredient5": "",
-      "strIngredient6": "",
-      "strIngredient7": "",
-      "strIngredient8": "",
-      "strIngredient9": "",
-      "strIngredient10": "",
-      "id": "3dlcsXs"
-    },
-    {
-      "strDrink": "queen",
-      "strCategory": "canal",
-      "strAlcoholic": "non alcoholic",
-      "strInstructions": "mix",
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/b3n0ge1503565473.jpg",
-      "strIngredient1": "water\nmango\napple ",
-      "strIngredient2": "",
-      "strIngredient3": "",
-      "strIngredient4": "",
-      "strIngredient5": "",
-      "strIngredient6": "",
-      "strIngredient7": "",
-      "strIngredient8": "",
-      "strIngredient9": "",
-      "strIngredient10": "",
-      "id": "yVQB_do"
     },
     {
       "strDrink": "hallo",

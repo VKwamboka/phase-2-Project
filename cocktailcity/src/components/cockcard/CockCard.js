@@ -1,15 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-export default function CockCard({ drinkName, drinkThumb, drinkId}) {
-  
-
-  // const {drinkName, drinkThumb, drinkId} = drinks
-
-  // const [cocktails, setCocktails] = useState([]);
-  //   const [favoriteVisible, setFavoriteVisible] = useState(true);
-  //   const cocktailsToDisplay = cocktails.filter((cocktail) => favoriteVisible || cocktail.isFavorite);
-
+export default function CockCard({drink, drinkName, drinkThumb, drinkId, addToFavorites}) {
 
   return (
     <div className='scard'>
@@ -21,9 +13,12 @@ export default function CockCard({ drinkName, drinkThumb, drinkId}) {
                 {/* PROBLEM HERE */}
                 {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                 <Link to={"/drink/"+drinkId}  className="btn btn-primary btn-sm">Details</Link>
-                <button className='btn btn-success btn-sm'>
+                {/* <button className='btn btn-success btn-sm'> */}
                 {/* {drink.isFavorite ? "Unfavorite" : "♥ Favorite" } */}
-               Favorite♥ 
+               {/* Favorite♥ 
+                </button> */}
+                <button className='btn btn-success btn-sm' onClick={() => addToFavorites(drink)}>
+                  {drinkId.isFavorite ? "Unfavorite" : "♥ Favorite" }
                 </button>
                 {/* <button type="button" class="btn btn-danger">Delete</button> */}
             </div>
