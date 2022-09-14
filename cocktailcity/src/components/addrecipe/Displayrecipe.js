@@ -24,7 +24,6 @@ function Displayrecipe() {
   )
   function handleDeleteClick(drinkRemove) {
     setDrinks(drinks.filter(drink => drink.id !== drinkRemove.id))
-    console.log("hi")
   }
     
   function addDrink(newDrink) {

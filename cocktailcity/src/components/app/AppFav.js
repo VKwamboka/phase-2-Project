@@ -7,32 +7,41 @@ export default function AppFav() {
   
     const [drinks, setDrinks] = useState([]);
       const [favoriteVisible, setFavoriteVisible] = useState(true);
+      
 
       const values = Object.values(drinks);
-        // console.log(values);
+        console.log(values);
       const cocktailsToDisplay = values.filter((drink) => favoriteVisible || drink.isFavorite);
       console.log(cocktailsToDisplay)
    
       //load drinks from external API
-    //   const drinkFetcher = () =>{
-    //     fetch(DRINK_URL)
-    //     .then((r) => r.json())
-    //     .then((data) =>{
-    //       setDrinks(data)
-    //     })
-    //   }
+      const drinkFetcher = () =>{
+        fetch(DRINK_URL)
+        .then((r) => r.json())
+        .then((data) =>{
+          setDrinks(data)
+        })
+      }
     
-    //   useEffect(
-    //     drinkFetcher, []
-    //   )
+      useEffect(
+        drinkFetcher, []
+      )
   
+
+      // useEffect(() => {
+      //   setFavorites(drinks);
+      // }, []);
+    
+      // useEffect(() => {
+      //   console.log(favorites);
+      // }, [favorites]);
       
         
   
   
       function addToFavorites(favCocktail) {
-        setDrinks(drinks.map(cocktail => {
-          return cocktail.id === favCocktail.id ? {...favCocktail, isFavorite: !favCocktail.isFavorite} : cocktail
+        setDrinks(values.map(cocktail => {
+          return cocktail.idDrink === favCocktail.idDrink ? {...favCocktail, isFavorite: !favCocktail.isFavorite} : cocktail
           }  
         ))
       }

@@ -41,7 +41,7 @@ useEffect(
 )
 
 
-let card =  drinks.map(drink =>{
+let card =  drinks?.map(drink =>{
   return(
     
     <CockCard 
@@ -60,16 +60,17 @@ let card =  drinks.map(drink =>{
 
       <h3 className='mt-4'>MOST POPULAR DRINKS </h3>
       <form onSubmit={handleSubmit}>
-        {/* <label htmlFor="search" className="form-label">SEARCH DRINK</label> */}
        
         <input type="text" className="form-control" id="search" name="search" placeholder='Search Drink by Name' value={searchItem} onChange={handleSearch}/>
       </form>
       
      
-        <hr className='class1'/>
-        <br/>
+      <hr className='class1'/>
+      <br/>
       <div >
+       <h3> {results} cocktails found</h3>
           {card}
+          
       </div>
 
     </div>
