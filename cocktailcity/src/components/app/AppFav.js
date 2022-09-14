@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
 import FavouritesContainer from "../favourites/FavouritesContainer";
+import ReciContainer from "../addrecipe/ReciContainer";
 
 const DRINK_URL = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
 
@@ -51,7 +52,7 @@ export default function AppFav() {
           return (<h1>You have no favorites added</h1>)
         } else {
           return (
-            <FavouritesContainer 
+            <ReciContainer
               drinks={cocktailsToDisplay} 
             //   removePoem={removePoem} 
               addToFavorites={addToFavorites}

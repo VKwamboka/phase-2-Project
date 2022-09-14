@@ -8,6 +8,8 @@ const RECIPE_URL = "http://localhost:8004/drinks"
 function Displayrecipe() {
 
   const [drinks, setDrinks] = useState([]);
+  const [favoriteVisible, setFavoriteVisible] = useState(true);
+  const drinksToDisplay = drinks.filter((drink) => favoriteVisible || drink.isFavorite);
 
  
   //load drinks from db
@@ -29,6 +31,13 @@ function Displayrecipe() {
   function addDrink(newDrink) {
     setDrinks([...drinks, newDrink]);
   }
+
+  function addToFavorites(favDrink) {
+    setDrinks(drinks.map(drink => {
+      return drink.id === favDrink.id ? {...favDrink, isFavorite: !favDrink.isFavorite} : drink
+      }  
+    ))
+  }
   
   let drinkCards =drinks.map((drink) => ( <ReciContainer 
     title={drink.strDrink} 
@@ -37,6 +46,7 @@ function Displayrecipe() {
     drinkk ={drink.idDrink}
      key ={drink.id}
      handleDeleteClick = {handleDeleteClick}
+     addToFavorites={addToFavorites}
      />))
   return (
     <div className='container'>

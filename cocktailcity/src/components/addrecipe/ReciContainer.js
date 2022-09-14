@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 const cocktailAPI = "http://localhost:8004/drinks";
 
-export default function ReciContainer({ title, drinkThumb, drinkId,handleDeleteClick}) {
-  
+export default function ReciContainer({ title, drinkThumb, drinkId,handleDeleteClick,addToFavorites}) {
+  let all = title + drinkThumb + drinkId
   function onDeleteClick(e) {
     e.preventDefault();
     fetch(`${cocktailAPI}/${drinkId}`, {
@@ -29,10 +29,10 @@ export default function ReciContainer({ title, drinkThumb, drinkId,handleDeleteC
               {/* <button  className='btn btn-success btn-sm'>
               Fav♥
               </button> */}
-              {/* <button onClick={() => addToFavorites(drinkId)}>
-                 {drinkId.isFavorite ? "Unfavorite" : "♥ Favorite" }
-              </button> */}
-              <button type="button" className="btn btn-danger btn-sm" onClick={onDeleteClick}>DELETE</button>
+              <button className='btn btn-success btn-sm' onClick={() => addToFavorites(all)}>
+                 {all.isFavorite ? "Unlike" : "♥ Like" }
+              </button>
+              <button type="button" className="btn btn-danger btn-sm" onClick={onDeleteClick}>DEL</button>
           </div>
         </div>  
       </div>
